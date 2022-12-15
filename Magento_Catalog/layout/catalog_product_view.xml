@@ -1,0 +1,16 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Framework\View\Element\Template" name="custom.text" template="Magento_Catalog::view/text.phtml" after="product.info.price"/>
+        </referenceContainer>
+
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <move element="product.info.overview" destination="page.main.title" />
+        <move element="product.info.stock.sku" destination="product.info.main" after="page.main.title"/>
+
+        <move element="reviews.tab" destination="content" after="-" />
+        <move element="catalog.product.related" destination="content" after="product.info.details"/>
+
+        <referenceBlock name="product.attributes" remove="true" /> <!-- tab de "more information"-->
+     </body>
+</page>
