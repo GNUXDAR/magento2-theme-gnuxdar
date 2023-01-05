@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel.wrapper">
+            <container name="header.panel.bottom" after="header.panel" htmlClass="header-panel-bottom" htmlTag="div">
+                <block name="header.panel.huincha" class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">panel-header-huincha</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
